@@ -4,6 +4,9 @@ public class Point {
     private int x;
     private int y;
 
+    // EK COUNTER
+    public static int counter;
+
     public Point (int x, int y) {
         this.x = x;
         this.y = y;
@@ -25,13 +28,24 @@ public class Point {
     }
 
     public double distance(){
+        logCounter();
         return Math.sqrt(Math.pow(getX(),2) + Math.pow(getY(),2));
     }
     public double distance(int a, int b){
+        logCounter();
         return Math.sqrt(Math.pow(getX() - a,2) + Math.pow(getY() - b,2));
     }
     public double distance(Point p) {
+        logCounter();
+        if (p!= null) {
         return Math.sqrt(Math.pow(getX() - p.x , 2) + Math.pow(getY() - p.y , 2));
+        }
+        return distance();
+    }
+
+    // EK VOID COUNTER
+    public void logCounter() {
+    counter++;
     }
 
 }
