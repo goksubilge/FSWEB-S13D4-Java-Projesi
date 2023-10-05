@@ -1,3 +1,5 @@
+import com.bilge.model.Colors;
+import com.bilge.model.Player;
 import com.bilge.model.Point;
 
 public class Main {
@@ -26,6 +28,14 @@ public class Main {
 
         System.out.println(" --- Player Class --- ");
 
-
+        Player player1 = new Player("Dogan",1000, Colors.PINK);
+        System.out.println(player1);
+        player1.loseHealth(80);
+        System.out.println(player1);
+        player1.restoreHealth(20);
+        System.out.println(player1);
+        player1.loseHealth(50);
+        System.out.println(player1);
+        player1.restoreHealth(1000);
     }
 }
